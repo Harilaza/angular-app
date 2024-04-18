@@ -1,0 +1,19 @@
+<div class="flex flex-col items-center rounded-xl shadow-xl p-10 bg-white">
+  <h1>Connexion</h1>
+  <app-input-text
+    [id]="'username'"
+    [logo]="'bx-user'"
+    [customPlaceholder]="'Pseudonyme'"
+    (value)="user.username = $event"
+  />
+  <app-input-password
+    [id]="'password'"
+    [customPlaceholder]="'Mot de passe'"
+    (value)="user.password = $event"
+  />
+  <app-submit-button
+    [label]="'Envoyer'"
+    (submit)="submit()"
+  />
+  <a routerLink="/register" class="text-sm mt-5">Je n'ai pas encore de compte</a>
+</div>
